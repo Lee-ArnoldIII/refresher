@@ -1,7 +1,21 @@
 <h1>Results Page!!!</h1>
 
 
-<% users.forEach(function(info) { %>
+<!-- <% users.forEach(function(info) { %>
     <li><%= info['name'] %> <%= info['email'] %> </li>
-<% }) %> 
+<% }) %>  -->
 
+<table> 
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+    </tr>
+    <% users.forEach(function(info) { %>
+        <tr>
+            <td><%= info['name'] %></td>
+            <td><%= info['email'] %></td>
+            <td><%= info['phone'] %></td>
+        </tr>
+  <%  }) %>
+</table>
