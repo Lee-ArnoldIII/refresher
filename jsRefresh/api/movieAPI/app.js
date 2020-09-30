@@ -23,6 +23,23 @@ app.get('/results', async (req, res) => {
     }
 });
 
+app.get('/todos', async (req, res) => {
+    try {
+        const result = await axios.get(
+            `https://jsonplaceholder.typicode.com/todos/`
+        );
+        console.log(result.data)
+        const todos = result.data
+
+        res.render('todos', {
+            todos
+        });
+    } catch (erro) {
+        console.log(error);
+        res.status(404).send('Error while getting list of todos');
+    }
+});
+
 // app.get('/results', (req, res) => {
 //     users = axios.get('https://jsonplaceholder.typicode.com/users')
 //     .then(response => {
