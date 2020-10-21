@@ -34,7 +34,7 @@ app.get('/todos', async (req, res) => {
         res.render('todos', {
             todos
         });
-    } catch (erro) {
+    } catch (err) {
         console.log(error);
         res.status(404).send('Error while getting list of todos');
     }
