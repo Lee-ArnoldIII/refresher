@@ -9,10 +9,10 @@ app.set('view engine', 'ejs')
 app.get('/results', async (req, res) => {
     try {
         const result = await axios.get(
-            `https://collectionapi.metmuseum.org/public/collection/v1/objects/437133`
+            `https://collectionapi.metmuseum.org/public/collection/v1/objects`
         );
         console.log(result.data)
-        const items = result.data['tags']
+        const items = result.data.objectIDs
 
         res.render('results', {
             items 
