@@ -2,7 +2,7 @@
 
 
 <!-- <% users.forEach(function(info) { %>
-    <li><%= info['name'] %> <%= info['email'] %> </li>
+    <li><%= info.name %> <%= info['email'] %> </li>
 <% }) %>  -->
 
 <table> 
@@ -13,7 +13,7 @@
     </tr>
     <% users.forEach(function(info) { %>
         <tr>
-            <td><%= info['name'] %></td>
+            <td><%= info.name %></td>
             <td><%= info['email'] %></td>
             <td><%= info['phone'] %></td>
         </tr>
